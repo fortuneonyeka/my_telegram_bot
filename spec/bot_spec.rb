@@ -21,5 +21,25 @@ require_relative'../lib/evergreen_bot'
           end
         end
       end
-      
+      describe Motivation do
+        let(:quotes) {Motivation.new}
+        describe 'initialize' do
+          it " It makes the instance of Motivation" do
+            expect(quotes).to be_a Motivation
+          end
+          it "It does not make instance of Programmer" do
+            expect(quotes).not_to be_a Programmer
+          end
+          it "It does not make instance of Hacks" do
+            expect(quotes).not_to be_a Hacks
+          end
+        end
+        describe 'good_motivation' do
+          it "it returns good morning multivations" do
+            expect(quotes.good_motivation).to be_a String
+          end
+          it "it returns good morning motivation as string not numeric" do
+            expect(quotes.good_motivation).not_to be_a Numeric
+          end
+        end
     end
