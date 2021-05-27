@@ -19,6 +19,8 @@ Telegram::Bot::Client.run(TOKEN_API) do |bot|
       bot.api.send_message(chat_id: message.chat.id, text: "The day has yet to be written, but there are several ways to fill the page, its entirely up to you to write your own story")
     when '/Programming_quotes'
       bot.api.send_message(chat_id: message.chat.id, text: "Programs must be written for people to read, and only incidentally for machines to execute")
+    else
+      bot.api.send_message(chat_id: message.chat.id, text: "Invalid entry. please select /lifehack /morning_mutivation /Programming_quotes /quit /Confirm /Exit")
     end
   end
 end
