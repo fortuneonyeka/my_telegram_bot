@@ -10,7 +10,9 @@ Telegram::Bot::Client.run(TOKEN_API) do |bot|
       bot.api.send_message(chat_id: message.chat.id, text: "Are you sure you want to quit this early? enter /Confirm to quit")
     when '/Confirm'
       bot.api.send_message(chat_id: message.chat.id, text: "Goodbye")
-
+    
+    when '/Exit'
+      bot.api.send_message(chat_id: message.chat.id, text: "Goodbye my good friend, i do hope to see you again soon")
     end
   end
 end
