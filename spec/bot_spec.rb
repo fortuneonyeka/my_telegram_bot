@@ -42,4 +42,27 @@ require_relative'../lib/evergreen_bot'
             expect(quotes.good_motivation).not_to be_a Numeric
           end
         end
+        describe Programmer do
+          let(:sayings) {Programmer.new}
+          describe 'initialize' do
+            it "It makes the instance of Programer" do
+              expect(sayings).to be_a Programmer
+            end
+            it "It does npt makes the instance of Motivation" do
+              expect(sayings).not_to be_a Motivation
+            end
+            it "It does npt makes the instance of Hacks" do
+              expect(sayings).not_to be_a Hacks
+            end
+          end
+          describe "program_sayings" do
+            it "It returns programming quotes" do
+              expect(sayings.program_sayings).to be_a String
+            end
+            it "It does not return Numeric" do
+              expect(sayings.program_sayings).not_to be_a Numeric
+            end
+          end
+        end
+      end
     end
