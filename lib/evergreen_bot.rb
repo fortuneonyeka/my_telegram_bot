@@ -1,5 +1,5 @@
 require 'telegram/bot'
-require_relative '../config.rb'
+# require_relative '../config.rb'
 
 Telegram::Bot::Client.run(TOKEN_API) do |bot|
   bot.listen do |message|
