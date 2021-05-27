@@ -15,7 +15,8 @@ Telegram::Bot::Client.run(TOKEN_API) do |bot|
       bot.api.send_message(chat_id: message.chat.id, text: "Goodbye my good friend, i do hope to see you again soon")
     when '/lifehack'
       bot.api.send_message(chat_id: message.chat.id, text: "Optimisim is the faith that leads to achievement. Nothing can be be achieved without hope and confidence")
-
+    when '/morning_mutivation'
+      bot.api.send_message(chat_id: message.chat.id, text: "The day has yet to be written, but there are several ways to fill the page, its entirely up to you to write your own story")
     end
   end
 end
