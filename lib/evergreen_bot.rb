@@ -1,36 +1,35 @@
 require 'telegram/bot'
+require_relative './lifehack'
+require_relative './motivation'
+require_relative './programming_quotes'
 require_relative '../config'
 
 
 class Evergreenbot
   attr_reader :text
   def initialize
-    
     Telegram::Bot::Client.run(TOKEN_API) do |bot|
       bot.listen do |message|
         case message.text
         when '/start'
-          bot.api.send_message(chat_id: message.chat.id,
-                               text: 'Welcome to Evergreenbot, I ma a multivational bot. my commands are, /lifehack, /morning_mutivation ,/Programming_quotes, /quit, /Confirm /Exit')
+          bot.api.send_message(chat_id: message.chat.id,text: 'Welcome to Evergreenbot, I ma a motivational bot. my commands are, /lifehack, /morning_motivation ,/Programming_quotes, /quit, /Confirm /Exit')
         when '/quit'
-          bot.api.send_message(chat_id: message.chat.id,
-                               text: 'Are you sure you want to quit this early? enter /Confirm to quit')
+          bot.api.send_message(chat_id: message.chat.id,text: 'Are you sure you want to quit this early? enter /Confirm to quit')
         when '/Confirm'
           bot.api.send_message(chat_id: message.chat.id, text: 'Goodbye')
         when '/Exit'
           bot.api.send_message(chat_id: message.chat.id, text: 'Goodbye my good friend, i do hope to see you again soon')
         when '/lifehack'
-          bot.api.send_message(chat_id: message.chat.id,
-                               text: 'Optimisim is the faith that leads to achievement,Nothing can be be achieved without hope and confidence')
-        when '/morning_mutivation'
-          bot.api.send_message(chat_id: message.chat.id,
-                               text: 'The day has yet to be written, but there are several ways to fill the page, its entirely up to you to write your own story')
+          life = Hacks.new
+          bot.api.send_message(chat_id: message.chat.id,text: life.hack_quotes )
+        when '/morning_motivation'
+          good_morning = Motivation.new
+          bot.api.send_message(chat_id: message.chat.id,text: good_morning.good_motivation )
         when '/Programming_quotes'
-          bot.api.send_message(chat_id: message.chat.id,
-                               text: 'Programs must be written for people to read, and only incidentally for machines to execute')
+          sayings = Programmer.new
+          bot.api.send_message(chat_id: message.chat.id,text: sayings.program_sayings )
         else
-          bot.api.send_message(chat_id: message.chat.id,
-                               text: 'Invalid entry. please select /lifehack /morning_mutivation /Programming_quotes /quit /Confirm /Exit')
+          bot.api.send_message(chat_id: message.chat.id,text: 'Invalid entry. please select /lifehack /morning_motivation /Programming_quotes /quit /Confirm /Exit')
         end
        end
       end
