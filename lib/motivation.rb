@@ -13,7 +13,6 @@ class Motivation
     array[rand(array.size)]
   end
 
-
   def good_motivation
     Motivation.rand_string(@morning_motivation)
   end
