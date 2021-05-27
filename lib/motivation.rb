@@ -3,11 +3,10 @@ class Motivation
 
   def initialize
     @morning_motivation = [
-      'The day has yet to be written, but there are several ways to fill the page, its entirely up to you to write your own story', 
+      'The day has yet to be written, but there are several ways to fill the page, its entirely up to you to write your own story',
       'Blessings of grace and peace be with you today and every day'
     ]
   end
-
 
   def self.rand_string(array)
     array[rand(array.size)]
@@ -16,5 +15,4 @@ class Motivation
   def good_motivation
     Motivation.rand_string(@morning_motivation)
   end
-
 end
