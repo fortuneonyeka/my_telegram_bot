@@ -6,9 +6,9 @@ AllCops:
     - "node_modules/**/*"
 
   DisplayCopNames: true
-
+  SuggestExtensions: false
 Layout/LineLength:
-  Max: 190
+  Max: 2500
 Metrics/MethodLength:
   Max: 30
 Metrics/AbcSize:

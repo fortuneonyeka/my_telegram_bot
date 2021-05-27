@@ -3,8 +3,7 @@ class Motivation
 
   def initialize
     @morning_motivation = [
-      'The day has yet to be written, but there are several ways to fill the page, its entirely up to you to write your own story',
-      'Blessings of grace and peace be with you today and every day'
+      'The day has yet to be written, but there are several ways to fill the page, its entirely up to you to write your own story', 'Blessings of grace and peace be with you today and every day'
     ]
   end
 

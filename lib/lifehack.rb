@@ -1,5 +1,4 @@
 require_relative './helper_method'
-
 class Hacks
   include Methods
   attr_reader :hack
