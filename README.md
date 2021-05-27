@@ -3,10 +3,32 @@
 # Microverse Ruby Capstone Project
 
 ## Telegram Bot (Evergreenbot)
-
 - This Telegram 🤖 Bot is built with Ruby And [Telegram bot API](https://core.telegram.org/bots/api)
 - Simply search for 'Evergreenbot'. 
 - This 🤖 Bot accepts some basic commands and respond with Good morning quotes, programming quotes or lifehack quotes Randomly  depending on the User selection and command input.
+
+![screenshot](./images/bot.png)
+
+## Install and Run the Bot Locally
+
+In order to run the 🤖 Bot, you need to install RUBY in your computer. For windows you can go to [Ruby installer](https://rubyinstaller.org/) and for MAC and LINUX you can go to [Ruby official site](https://www.ruby-lang.org/en/downloads/) for intructions on how to intall it.
+
+## When you have Ruby Installed in your System, please follow the steps bellow to run the Bot
+
+**Step 1**<br>
+Clone the repo in your local folder where you want to run it<br>
+`https://github.com/fortuneonyeka/my_telegram_bot.git`.<br>
+**Step 2**<br>
+After cloning `cd` into project folder `$ cd my_telegram_bot` create a `config.rb` in the project root directory You will need Telegram access Token API, create a variable inside the `config.rb` file  with name ` TOKEN_API = 'APIKEY' ` and asign your APIKEY to the variable, then uncomment the `# require_relative '../config'` inside `evergreen_bot.rb` file <br>
+**Step 3**<br> 
+Run `bundle install` to install the gems from the `Gemfile`.<br>
+**Step 4**<br>
+Run `bin/main.rb` to start the bot.<br>
+**Step 5**<br>
+You can use the commands defined in the [Available commands section](#Commands-to-Run-the-Bot) defined above.<br>
+
+#### This Bot is Live Now. You can click [🤖 here](t.me/evergreenfortunebot.)to Play with Bot
+
 
 ## Built With
 
@@ -42,26 +64,6 @@ $ bundle install or bundle
 ```
 $ rspec
 ```
-
-## Install and Run the Bot Locally
-
-In order to run the 🤖 Bot, you need to install RUBY in your computer. For windows you can go to [Ruby installer](https://rubyinstaller.org/) and for MAC and LINUX you can go to [Ruby official site](https://www.ruby-lang.org/en/downloads/) for intructions on how to intall it.
-
-## When you have Ruby Installed in your System, please follow the steps bellow to run the Bot
-
-**Step 1**<br>
-Clone the repo in your local folder where you want to run it<br>
-`https://github.com/fortuneonyeka/my_telegram_bot.git`.<br>
-**Step 2**<br>
-After cloning `cd` into project folder `$ cd my_telegram_bot` create a `config.rb` in the project root directory You will need Telegram access Token API, create a variable inside the `config.rb` file  with name ` TOKEN_API = 'APIKEY' ` and asign your APIKEY to the variable, then uncomment the `# require_relative '../config'` inside `evergreen_bot.rb` file <br>
-**Step 3**<br> 
-Run `bundle install` to install the gems from the `Gemfile`.<br>
-**Step 4**<br>
-Run `bin/main.rb` to start the bot.<br>
-**Step 5**<br>
-You can use the commands defined in the [Available commands section](#Commands-to-Run-the-Bot) defined above.<br>
-
-#### This Bot is Live Now. You can click [🤖 here](t.me/evergreenfortunebot.)to Play with Bot
 
 ## Author
 
