@@ -2,7 +2,7 @@ require 'telegram/bot'
 require_relative './lifehack'
 require_relative './motivation'
 require_relative './programming_quotes'
-require_relative '../config'
+# require_relative '../config'
 
 class Evergreenbot
   attr_reader :text
