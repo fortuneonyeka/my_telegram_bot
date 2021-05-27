@@ -17,6 +17,8 @@ Telegram::Bot::Client.run(TOKEN_API) do |bot|
       bot.api.send_message(chat_id: message.chat.id, text: "Optimisim is the faith that leads to achievement. Nothing can be be achieved without hope and confidence")
     when '/morning_mutivation'
       bot.api.send_message(chat_id: message.chat.id, text: "The day has yet to be written, but there are several ways to fill the page, its entirely up to you to write your own story")
+    when '/Programming_quotes'
+      bot.api.send_message(chat_id: message.chat.id, text: "Programs must be written for people to read, and only incidentally for machines to execute")
     end
   end
 end
