@@ -7,7 +7,7 @@ require_relative './programming_quotes'
 class Evergreenbot
   attr_reader :text
 
-  def initialize 
+  def initialize # rubocop:disable Metrics/MethodLength
     Telegram::Bot::Client.run(TOKEN_API) do |bot|
       bot.listen do |message|
         case message.text
