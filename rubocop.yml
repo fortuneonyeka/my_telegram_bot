@@ -8,7 +8,7 @@ AllCops:
   DisplayCopNames: true
   SuggestExtensions: false
 Layout/LineLength:
-  Max: 2500
+  Max: 200
 Metrics/MethodLength:
   Max: 30
 Metrics/AbcSize:
