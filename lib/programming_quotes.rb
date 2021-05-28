@@ -1,3 +1,5 @@
+require_relative './helper_method'
+
 class Programmer
   attr_reader :program
 
@@ -7,10 +9,6 @@ class Programmer
   end
 
   def program_sayings
-    Programmer.rand_string(@program)
-  end
-
-  def self.rand_string(array)
-    array[rand(array.size)]
+    Methods.rand_string(@program)
   end
 end
