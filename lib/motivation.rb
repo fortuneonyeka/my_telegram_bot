@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Motivation
   attr_reader :morning_motivation
 
