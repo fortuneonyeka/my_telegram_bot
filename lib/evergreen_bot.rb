@@ -2,7 +2,7 @@ require 'telegram/bot'
 require_relative './lifehack'
 require_relative './motivation'
 require_relative './programming_quotes'
-# require_relative '../config'
+require_relative '../config'
 
 class Evergreenbot
   attr_reader :text
@@ -25,8 +25,7 @@ class Evergreenbot
         when '/lifehack'
           bot.api.send_message(chat_id: message.chat.id, text: Hacks.new.instance_eval { hack_quotes })
         when '/morning_motivation'
-          good_morning = Motivation.new
-          bot.api.send_message(chat_id: message.chat.id, text: good_morning.good_motivation)
+          bot.api.send_message(chat_id: message.chat.id, text: Motivation.new.instance_eval { good_motivation })
         when '/Programming_quotes'
           bot.api.send_message(chat_id: message.chat.id, text: Programmer.new.instance_eval { program_sayings })
         else
