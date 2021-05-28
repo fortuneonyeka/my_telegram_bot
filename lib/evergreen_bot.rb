@@ -7,15 +7,15 @@ require_relative './programming_quotes'
 class Evergreenbot
   attr_reader :text
 
-  def initialize # rubocop:disable Metrics/MethodLength
+  # rubocop:disable Metrics/CyclomaticComplexity
+  def initialize
+    # rubocop:enable Metrics/CyclomaticComplexity
     Telegram::Bot::Client.run(TOKEN_API) do |bot|
       bot.listen do |message|
         case message.text
         when '/start'
-        # rubocop:disable LineLength
           bot.api.send_message(chat_id: message.chat.id,
                                text: 'Welcome to Evergreenbot, I ma a motivational bot. my commands are, /lifehack, /morning_motivation ,/Programming_quotes, /quit, /Confirm /Exit')
-        # rubocop:enable LineLength
         when '/quit'
           bot.api.send_message(chat_id: message.chat.id, text: 'Are you sure you want to quit this early? enter /Confirm to quit')
         when '/Confirm'
