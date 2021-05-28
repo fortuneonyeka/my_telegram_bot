@@ -23,13 +23,12 @@ class Evergreenbot
           bot.api.send_message(chat_id: message.chat.id,
                                text: 'Goodbye my good friend, i do hope to see you again soon')
         when '/lifehack'
-          life = Hacks.new
-          bot.api.send_message(chat_id: message.chat.id, text: Hacks.new.instance_eval{hack_quotes})
+          bot.api.send_message(chat_id: message.chat.id, text: Hacks.new.instance_eval { hack_quotes })
         when '/morning_motivation'
           good_morning = Motivation.new
           bot.api.send_message(chat_id: message.chat.id, text: good_morning.good_motivation)
         when '/Programming_quotes'
-          bot.api.send_message(chat_id: message.chat.id, text: Programmer.new.instance_eval{program_sayings})
+          bot.api.send_message(chat_id: message.chat.id, text: Programmer.new.instance_eval { program_sayings })
         else
           bot.api.send_message(chat_id: message.chat.id,
                                text: 'Invalid entry. please select /lifehack /morning_motivation /Programming_quotes /quit /Confirm /Exit')
